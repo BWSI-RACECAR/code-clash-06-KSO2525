@@ -35,6 +35,13 @@ class Solution:
             if i > temp:
                 temp = i
         return temp
+    def bubblesort(arr):
+        for i in range(0, len(arr)):
+            for j in range(0, len(arr)-1):
+                if arr[j] > arr[j+1]:
+                    temp = arr[j]
+                    arr[j] = arr[j+1]
+                    arr[j+1] = temp
 
 def main():
     array = input().split(" ")
@@ -47,11 +54,5 @@ def main():
 
 if __name__ and "__main__":
     main()
-def bubblesort(arr):
-    for i in range(0, len(arr)):
-        for j in range(0, len(arr)-1):
-            if arr[j] > arr[j+1]:
-                temp = arr[j]
-                arr[j] = arr[j+1]
-                arr[j+1] = temp
+
     
