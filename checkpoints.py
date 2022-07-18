@@ -37,10 +37,11 @@ class Solution:
         # TODO: Write code below to return an int with the solution to the prompt
         for i in range(len(checkpoints) - 1):
             ranges.append(checkpoints[i+1] - checkpoints[i])
+        print(ranges)
         temp = ranges[0]
         for i in ranges:
             if i > temp:
-                i = temp
+                temp = i
         return temp
 
 def main():
