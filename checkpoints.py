@@ -33,14 +33,11 @@ class Solution:
         # type checkpoints: list
         # return type: int
         ranges = []
-        
         # TODO: Write code below to return an int with the solution to the prompt
         for i in range(len(checkpoints) - 1):
             ranges.append(checkpoints[i+1] - checkpoints[i])
         temp = ranges[0]
         for i in ranges:
-            if i < 0:
-                i = i * -1
             if i > temp:
                 temp = i
         return temp
