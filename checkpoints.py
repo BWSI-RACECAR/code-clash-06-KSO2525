@@ -39,6 +39,8 @@ class Solution:
             ranges.append(checkpoints[i+1] - checkpoints[i])
         temp = ranges[0]
         for i in ranges:
+            if i < 0:
+                i = i * -1
             if i > temp:
                 temp = i
         return temp
