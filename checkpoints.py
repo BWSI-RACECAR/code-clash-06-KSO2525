@@ -22,7 +22,13 @@ Input: [5, 0, 3, 6] ; Output: 3
 
 class Solution:
     def longestdistance(self, checkpoints):
-        
+        def bubblesort(arr):
+            for i in range(0, len(arr)):
+                for j in range(0, len(arr)-1):
+                    if arr[j] > arr[j+1]:
+                        temp = arr[j]
+                        arr[j] = arr[j+1]
+                        arr[j+1] = temp
         # type checkpoints: list
         # return type: int
         ranges = []
@@ -35,13 +41,7 @@ class Solution:
             if i > temp:
                 temp = i
         return temp
-    def bubblesort(self, arr):
-        for i in range(0, len(arr)):
-            for j in range(0, len(arr)-1):
-                if arr[j] > arr[j+1]:
-                    temp = arr[j]
-                    arr[j] = arr[j+1]
-                    arr[j+1] = temp
+    
 
 def main():
     array = input().split(" ")
